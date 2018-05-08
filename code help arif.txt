@@ -1,0 +1,39 @@
+run from symfony directory to start server:
+php -S 127.0.0.1:8000 -t public
+
+for routes to use before the link not Yaml file:
+composer require annotations
+
+Remove cache in symfony dev directory if you copy and override:
+rm -rf var/cache/dev/*
+
+check your routes:
+php bin/console debug:router
+
+list of logger:
+php bin/console debug:autowiring
+
+doctrine install:
+composer require doctrine maker
+then change .env data for db user name pass and db name
+
+create entity or model for controller to use in db
+php bin/console make:entity Article
+
+to update this entity do migration as:
+php bin/console doctrine:migrations:diff
+then
+php bin/console doctrine:migrations:migrate
+
+doctrine query from console
+php bin/console doctrine:query:sql 'SELECT * FROM article'
+
+clearing dev cache symfony:
+php bin/console cache:clear
+
+when u need a form 
+composer require form
+
+
+
+
